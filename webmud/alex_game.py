@@ -25,12 +25,14 @@ tavern.contents.append(dagger)
 # Make a dict to hold players
 players = {}
 
-def handle_message(message: str, id: str):
-    if id not in players:
-        
+def handle_message(message: str, id: str):  
+    print(f"message is {message}")
 
+    response = 'I dont know that command'
+          
     if message.lower().startswith('look'):
         currentRoom = tavern
         response = f"You are in {currentRoom.name}. {currentRoom.description}."
 
+    
     return response
